@@ -195,7 +195,10 @@ if __name__ == '__main__':
     )
 
     trainset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=train_transform)
+    trainset, valset = torch.utils.data.random_split(trainset, [int(len(trainset)*0.8), int(len(trainset)*0.2)])
+
     trainloader = torch.utils.data.DataLoader(trainset, batch_size=BATCH_SIZE, shuffle=True, num_workers=0)
+    valoader = torch.utils.data.DataLoader(valset, batch_size=BATCH_SIZE, shuffle=True, num_workers=0)
 
     testset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=test_transform)
     testloader = torch.utils.data.DataLoader(testset, batch_size=BATCH_SIZE, shuffle=False, num_workers=0)
@@ -216,7 +219,6 @@ if __name__ == '__main__':
         simclr_model.train()
         for batch_idx, data in enumerate(trainloader):
             image, _ = data
-            image = image
             
             simclr_model.zero_grad()
             aug1, aug2 = image
@@ -230,11 +232,26 @@ if __name__ == '__main__':
             epoch_losses += loss
         
         epoch_losses /= len(trainloader)
-        print(epoch_idx, epoch_losses.item(), flush=True)
-        
-        if epoch_losses < best_loss:
-            best_loss = epoch_losses
-            torch.save(simclr_model.state_dict(), f'models/simclr_model_{EPOCHS}_{BATCH_SIZE}_{TEMP}_{LR}.pth')
-        
-        if epoch_idx % 50 == 0:
-            torch.save(simclr_model.state_dict(), f'models/simclr_model_{epoch_idx}_{EPOCHS}_{BATCH_SIZE}_{TEMP}_{LR}.pth')
+    
+        with torch.no_grad():
+            simclr_model.eval()
+            val_epoch_losses = 0
+            for batch_idx, data in enumerate(valoader):
+                image, _ = data
+                
+                aug1, aug2 = image
+                aug1 = aug1.cuda()
+                aug2 = aug2.cuda()
+                aug1_out, aug2_out = simclr_model(aug1, aug2)
+                loss = nt_xent(aug1_out, aug2_out, temperature=TEMP)
+                val_epoch_losses += loss
+            val_epoch_losses /= len(valoader)
+
+            save_name = epoch_idx // 50
+
+            if epoch_losses < best_loss:
+                best_loss = val_epoch_losses
+                torch.save(simclr_model.state_dict(), f'models/simclr_model_{save_name}*50_{EPOCHS}_{BATCH_SIZE}_{TEMP}_{LR}.pth')
+
+
+    print(f'Train Loss {epoch_losses} ; Val Loss {val_epoch_losses}', flush=True)

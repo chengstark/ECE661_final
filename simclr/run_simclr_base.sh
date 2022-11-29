@@ -11,6 +11,6 @@ nvidia-smi
 
 python simclr_base.py \
     --temp 0.5 \
-    --batch_size 32 \
+    --batch_size 16 \
     --lr 0.5 \
     --epochs 200

@@ -1,0 +1,13 @@
+[I 14:18:48.202 NotebookApp] Serving notebooks from local directory: /home/users/zg78/ece661_final
+[I 14:18:48.202 NotebookApp] Jupyter Notebook 6.4.3 is running at:
+[I 14:18:48.203 NotebookApp] http://linux50:8886/?token=30449257c27f75d74340709aff9e65618737bb65db046a3e
+[I 14:18:48.203 NotebookApp]  or http://127.0.0.1:8886/?token=30449257c27f75d74340709aff9e65618737bb65db046a3e
+[I 14:18:48.203 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 14:18:48.230 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/users/zg78/.local/share/jupyter/runtime/nbserver-17683-open.html
+    Or copy and paste one of these URLs:
+        http://linux50:8886/?token=30449257c27f75d74340709aff9e65618737bb65db046a3e
+     or http://127.0.0.1:8886/?token=30449257c27f75d74340709aff9e65618737bb65db046a3e
+slurmstepd: error: *** JOB 2720924 ON linux50 CANCELLED AT 2022-11-29T14:19:14 ***
