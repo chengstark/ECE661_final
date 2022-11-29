@@ -254,4 +254,4 @@ if __name__ == '__main__':
                 torch.save(simclr_model.state_dict(), f'models/simclr_model_{save_name}*50_{EPOCHS}_{BATCH_SIZE}_{TEMP}_{LR}.pth')
 
 
-    print(f'Train Loss {epoch_losses} ; Val Loss {val_epoch_losses}', flush=True)
+        print(f'Train Loss {epoch_losses} ; Val Loss {val_epoch_losses}', flush=True)
