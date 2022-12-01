@@ -29,7 +29,7 @@ torch.manual_seed(0)
 def parse_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument('--batch_size', type=int, default=128)
-    parser.add_argument('--epochs', type=int, default=100)
+    parser.add_argument('--epochs', type=int, default=200)
     parser.add_argument('--lr', type=float, default=1e-4)
     parser.add_argument('--pretrained_path', type=str)
     args = parser.parse_args()
@@ -148,24 +148,29 @@ if __name__ == '__main__':
 
     print(args, BATCH_SIZE, EPOCHS, LR, pretrained_path, flush=True)
 
-    train_transform = transforms.Compose(
-        [transforms.Resize(size=(32, 32)),
-        transforms.ToTensor()]
+    color_jitter = torchvision.transforms.ColorJitter(
+        0.4, 0.4, 0.4, 0.1
     )
+    train_transform = torchvision.transforms.Compose(
+        [
+            transforms.RandomResizedCrop(size=(32, 32)),
+            transforms.RandomHorizontalFlip(p=0.5),
+            transforms.RandomApply([color_jitter], p=0.8),
+            torchvision.transforms.RandomGrayscale(p=0.2),
+            transforms.ToTensor(),
+        ]
+    )
+
     test_transform = transforms.Compose(
         [transforms.Resize(size=(32, 32)),
         transforms.ToTensor()]
     )
 
     trainset = torchvision.datasets.CIFAR10(root='/usr/xtmp/zg78/cifar10_data/', train=True, download=True, transform=train_transform)
-    trainset, valset = torch.utils.data.random_split(trainset, [int(len(trainset)*0.8), int(len(trainset)*0.2)])
-
     trainloader = torch.utils.data.DataLoader(trainset, batch_size=BATCH_SIZE, shuffle=True, num_workers=0)
-    valoader = torch.utils.data.DataLoader(valset, batch_size=BATCH_SIZE, shuffle=True, num_workers=0)
+
     testset = torchvision.datasets.CIFAR10(root='/usr/xtmp/zg78/cifar10_data/', train=False, download=True, transform=test_transform)
     testloader = torch.utils.data.DataLoader(testset, batch_size=BATCH_SIZE, shuffle=False, num_workers=0)
-
-    classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 
     print('data finished', flush=True)
 
@@ -188,7 +193,7 @@ if __name__ == '__main__':
         epoch_losses = 0
         epoch_correts = 0
         simclr_linear_eval_model.train()
-        for batch_idx, data in enumerate(tqdm(trainloader)):
+        for batch_idx, data in enumerate(trainloader):
             image, label = data
             image = image.cuda()
             label = label.cuda()
@@ -215,7 +220,7 @@ if __name__ == '__main__':
             val_epoch_losses = 0
             val_epoch_correts = 0
 
-            for batch_idx, data in enumerate(tqdm(valoader)):
+            for batch_idx, data in enumerate(testloader):
                 image, label = data
                 image = image.cuda()
                 label = label.cuda()
@@ -229,13 +234,13 @@ if __name__ == '__main__':
                 pred = torch.argmax(out, dim=1)
                 val_epoch_correts += torch.sum(pred == label).item()
 
-            val_epoch_losses /= len(valoader)
-            val_epoch_correts /= len(valset)
+            val_epoch_losses /= len(testloader)
+            val_epoch_correts /= len(testset)
 
             if val_epoch_losses < best_loss:
                 best_loss = val_epoch_losses
-                torch.save(simclr_linear_eval_model.state_dict(), f'models/simclr_model_linear_eval_{EPOCHS}_{BATCH_SIZE}_{LR}_{pretrained_path.split("/")[-1][:-4]}.pth')
-        
+                torch.save(simclr_linear_eval_model.state_dict(), f'models/simclr_linear_eval/simclr_model_linear_eval_{EPOCHS}_{BATCH_SIZE}_{LR}_{pretrained_path.split("/")[-1][:-4]}.pth')
+            
         print(f'Train Loss {epoch_losses} Acc {epoch_correts} ; Val Loss {val_epoch_losses} Acc {val_epoch_correts}', flush=True)
 
 
