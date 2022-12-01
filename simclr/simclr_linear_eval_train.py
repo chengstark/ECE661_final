@@ -25,20 +25,15 @@ random.seed(0)
 np.random.seed(0)
 torch.manual_seed(0)
 
-import argparse
-
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--batch_size', type=int)
-    parser.add_argument('--epochs', type=int)
-    parser.add_argument('--lr', type=float)
-    parser.add_argument('--temp', type=float)
-
+    parser.add_argument('--batch_size', type=int, default=128)
+    parser.add_argument('--epochs', type=int, default=100)
+    parser.add_argument('--lr', type=float, default=1e-4)
+    parser.add_argument('--pretrained_path', type=str)
     args = parser.parse_args()
-
     return args
-
 
 class ResNet_Block(nn.Module):
     def __init__(self, in_chs, out_chs, strides):
@@ -124,58 +119,23 @@ class SimCLR(nn.Module):
         aug2_out = self.linear2(aug2_out)
         
         return aug1_out, aug2_out
-
-
-
-class SimCLRTransform:
     
-    def __init__(self):
+    
+class SimCLR_linear_eval(nn.Module):
+    def __init__(self, encoder):
+        super(SimCLR_linear_eval, self).__init__()
+        self.encoder = encoder
+        self.linear = nn.Linear(64, 10, bias=False)
         
-        color_jitter = torchvision.transforms.ColorJitter(
-            0.4, 0.4, 0.4, 0.1
-        )
-        self.simclr_transform = torchvision.transforms.Compose(
-            [
-                transforms.RandomResizedCrop(size=(32, 32)),
-                transforms.RandomHorizontalFlip(p=0.5),
-                transforms.RandomApply([color_jitter], p=0.8),
-                torchvision.transforms.RandomGrayscale(p=0.2),
-                transforms.ToTensor(),
-            ]
-        )
-
-    def __call__(self, x):
-        return self.simclr_transform(x), self.simclr_transform(x)
-
-
-def nt_xent(aug1_out, aug2_out, temperature=1.0):
-    batch_size = aug1_out.shape[0]
-    augs = torch.cat((aug1_out, aug2_out), dim=0)
-    cos_sim = torch.matmul(augs, augs.T) / (torch.linalg.norm(augs, dim=1, ord=2) * torch.linalg.norm(augs, dim=1, ord=2))
-    cos_sim /= temperature
-    
-    cos_sim_diag = torch.diag(cos_sim)
-    
-    loss = None
-    for i in range(2 * batch_size):
-        if i < batch_size:
-            positive_idx = i + batch_size
-        else:
-            positive_idx = i - batch_size
+        for param in self.encoder.parameters():
+            param.requires_grad = False
         
-        row_loss = -torch.log(torch.exp(cos_sim[i][positive_idx]) / 
-                              (torch.sum(torch.exp(cos_sim[i])) - torch.exp(cos_sim_diag[i])))
+    def forward(self, x):
+        out = self.encoder(x).squeeze()
+        out = self.linear(out)
+        return out
 
-        if loss == None:
-            loss = row_loss
-        else:
-            loss += row_loss
-    loss /= (2 * batch_size)
-    return loss
     
-    
-
-
 if __name__ == '__main__':
 
     print('running', flush=True)
@@ -184,11 +144,14 @@ if __name__ == '__main__':
     BATCH_SIZE = args.batch_size
     EPOCHS = args.epochs
     LR = args.lr
-    TEMP = args.temp
+    pretrained_path = args.pretrained_path
 
-    print(args, BATCH_SIZE, EPOCHS, LR, TEMP, flush=True)
+    print(args, BATCH_SIZE, EPOCHS, LR, pretrained_path, flush=True)
 
-    train_transform = SimCLRTransform()
+    train_transform = transforms.Compose(
+        [transforms.Resize(size=(32, 32)),
+        transforms.ToTensor()]
+    )
     test_transform = transforms.Compose(
         [transforms.Resize(size=(32, 32)),
         transforms.ToTensor()]
@@ -199,59 +162,80 @@ if __name__ == '__main__':
 
     trainloader = torch.utils.data.DataLoader(trainset, batch_size=BATCH_SIZE, shuffle=True, num_workers=0)
     valoader = torch.utils.data.DataLoader(valset, batch_size=BATCH_SIZE, shuffle=True, num_workers=0)
-
     testset = torchvision.datasets.CIFAR10(root='/usr/xtmp/zg78/cifar10_data/', train=False, download=True, transform=test_transform)
     testloader = torch.utils.data.DataLoader(testset, batch_size=BATCH_SIZE, shuffle=False, num_workers=0)
 
-    train_transform = SimCLRTransform()
-    test_transform = transforms.Compose(
-        [transforms.Resize(size=(32, 32)),
-        transforms.ToTensor()]
-    )
+    classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 
-    simclr_model = SimCLR(projection_dim=64).cuda()
-    optimizer = torch.optim.Adam(simclr_model.parameters(), lr=LR)
+    print('data finished', flush=True)
+
+    criterion = nn.CrossEntropyLoss()
+
+    simclr_model = SimCLR(projection_dim=64)
+    simclr_model.load_state_dict(torch.load(pretrained_path))
+    simclr_model.cuda()
+
+    print('encoder loaded', flush=True)
+
+    simclr_linear_eval_model = SimCLR_linear_eval(simclr_model.encoder)
+    simclr_linear_eval_model.cuda()
+
+    optimizer = torch.optim.Adam(simclr_linear_eval_model.parameters(), lr=LR)
 
     best_loss = 9999999
 
     for epoch_idx in range(EPOCHS):
         epoch_losses = 0
-        simclr_model.train()
-        for batch_idx, data in enumerate(trainloader):
-            image, _ = data
+        epoch_correts = 0
+        simclr_linear_eval_model.train()
+        for batch_idx, data in enumerate(tqdm(trainloader)):
+            image, label = data
+            image = image.cuda()
+            label = label.cuda()
             
-            simclr_model.zero_grad()
-            aug1, aug2 = image
-            aug1 = aug1.cuda()
-            aug2 = aug2.cuda()
-            aug1_out, aug2_out = simclr_model(aug1, aug2)
-            loss = nt_xent(aug1_out, aug2_out, temperature=TEMP)
+            simclr_linear_eval_model.zero_grad()
+            out = simclr_linear_eval_model(image)
+            
+            loss = criterion(out, label)
             loss.backward()
             optimizer.step()
 
             epoch_losses += loss
         
+            pred = torch.argmax(out, dim=1)
+            epoch_correts += torch.sum(pred == label).item()
+        
         epoch_losses /= len(trainloader)
-    
+        epoch_correts /= len(trainset)
+            
+        
         with torch.no_grad():
-            simclr_model.eval()
+            simclr_linear_eval_model.eval()
+            
             val_epoch_losses = 0
-            for batch_idx, data in enumerate(valoader):
-                image, _ = data
-                
-                aug1, aug2 = image
-                aug1 = aug1.cuda()
-                aug2 = aug2.cuda()
-                aug1_out, aug2_out = simclr_model(aug1, aug2)
-                loss = nt_xent(aug1_out, aug2_out, temperature=TEMP)
-                val_epoch_losses += loss
-            val_epoch_losses /= len(valoader)
+            val_epoch_correts = 0
 
-            save_name = epoch_idx // 50
+            for batch_idx, data in enumerate(tqdm(valoader)):
+                image, label = data
+                image = image.cuda()
+                label = label.cuda()
+
+                out = simclr_linear_eval_model(image)
+
+                loss = criterion(out, label)
+
+                val_epoch_losses += loss
+
+                pred = torch.argmax(out, dim=1)
+                val_epoch_correts += torch.sum(pred == label).item()
+
+            val_epoch_losses /= len(valoader)
+            val_epoch_correts /= len(valset)
 
             if val_epoch_losses < best_loss:
                 best_loss = val_epoch_losses
-                torch.save(simclr_model.state_dict(), f'models/simclr_pretrained/simclr_model_{save_name}*50_{EPOCHS}_{BATCH_SIZE}_{TEMP}_{LR}.pth')
+                torch.save(simclr_linear_eval_model.state_dict(), f'models/simclr_model_linear_eval_{EPOCHS}_{BATCH_SIZE}_{LR}_{pretrained_path.split("/")[-1][:-4]}.pth')
+        
+        print(f'Train Loss {epoch_losses} Acc {epoch_correts} ; Val Loss {val_epoch_losses} Acc {val_epoch_correts}')
 
 
-        print(f'Train Loss {epoch_losses} ; Val Loss {val_epoch_losses}', flush=True)

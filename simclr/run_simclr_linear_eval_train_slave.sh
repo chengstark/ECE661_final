@@ -9,8 +9,8 @@ conda activate base_torch
 
 nvidia-smi
 
-python simclr_base.py \
-    --temp 0.5 \
-    --batch_size 16 \
-    --lr 0.5 \
-    --epochs 200
+echo $1
+
+python simclr_linear_eval_train.py \
+    --pretrained_path $1
+
