@@ -240,7 +240,7 @@ if __name__ == '__main__':
 
             if val_epoch_losses < best_loss:
                 best_loss = val_epoch_losses
-                torch.save(simclr_linear_eval_model.state_dict(), f'models/simclr_linear_eval/simclr_model_linear_eval_{EPOCHS}_{BATCH_SIZE}_{LR}_{pretrained_path.split("/")[-1][:-4]}.pth')
+                torch.save(simclr_linear_eval_model.state_dict(), f'models/simclr_semi_sup/simclr_semi_sup_{EPOCHS}_{BATCH_SIZE}_{LR}_{pretrained_path.split("/")[-1][:-4]}.pth')
             
         print(f'{epoch_idx} | Train Loss {epoch_losses} Acc {epoch_correts} ; Val Loss {val_epoch_losses} Acc {val_epoch_correts}', flush=True)
 
