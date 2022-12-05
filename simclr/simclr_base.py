@@ -151,7 +151,7 @@ class SimCLRTransform:
 def nt_xent(aug1_out, aug2_out, temperature=1.0):
     batch_size = aug1_out.shape[0]
     augs = torch.cat((aug1_out, aug2_out), dim=0)
-    cos_sim = torch.matmul(augs, augs.T) / (torch.linalg.norm(augs, dim=1, ord=2) * torch.linalg.norm(augs, dim=1, ord=2))
+    cos_sim = torch.matmul(torch.nn.functional.normalize(augs, dim=1) , torch.nn.functional.normalize(augs, dim=1).T)
     cos_sim /= temperature
     
     cos_sim_diag = torch.diag(cos_sim)
