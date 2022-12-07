@@ -29,7 +29,7 @@ torch.manual_seed(0)
 def parse_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument('--batch_size', type=int, default=128)
-    parser.add_argument('--epochs', type=int, default=200)
+    parser.add_argument('--epochs', type=int, default=500)
     parser.add_argument('--lr', type=float, default=1e-4)
     parser.add_argument('--pretrained_path', type=str)
     parser.add_argument('--label_percentage', type=float, default=0.1)
@@ -146,7 +146,7 @@ if __name__ == '__main__':
     pretrained_path = args.pretrained_path
     label_percentage = args.label_percentage
 
-    print(args, BATCH_SIZE, EPOCHS, LR, pretrained_path, flush=True)
+    print(args, BATCH_SIZE, EPOCHS, LR, pretrained_path, label_percentage, flush=True)
 
     color_jitter = torchvision.transforms.ColorJitter(
         0.4, 0.4, 0.4, 0.1
@@ -240,7 +240,7 @@ if __name__ == '__main__':
 
             if val_epoch_losses < best_loss:
                 best_loss = val_epoch_losses
-                torch.save(simclr_linear_eval_model.state_dict(), f'models/simclr_semi_sup/simclr_semi_sup_{EPOCHS}_{BATCH_SIZE}_{LR}_{pretrained_path.split("/")[-1][:-4]}.pth')
+                torch.save(simclr_linear_eval_model.state_dict(), f'models/simclr_semi_sup/simclr_semi_sup_{EPOCHS}_{BATCH_SIZE}_{LR}_{label_percentage}_{pretrained_path.split("/")[-1][:-4]}.pth')
             
         print(f'{epoch_idx} | Train Loss {epoch_losses} Acc {epoch_correts} ; Val Loss {val_epoch_losses} Acc {val_epoch_correts}', flush=True)
 

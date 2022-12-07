@@ -1,38 +1,701 @@
-[I 19:40:37.870 NotebookApp] Serving notebooks from local directory: /home/users/zg78/ece661_final
-[I 19:40:37.870 NotebookApp] Jupyter Notebook 6.4.3 is running at:
-[I 19:40:37.870 NotebookApp] http://linux51:8886/?token=ce6f817af93569e670e60d0c7ba701fb44f5531ddcbf2a25
-[I 19:40:37.870 NotebookApp]  or http://127.0.0.1:8886/?token=ce6f817af93569e670e60d0c7ba701fb44f5531ddcbf2a25
-[I 19:40:37.870 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-[C 19:40:37.890 NotebookApp] 
+[I 21:02:01.060 NotebookApp] Serving notebooks from local directory: /home/users/zg78/ece661_final
+[I 21:02:01.060 NotebookApp] Jupyter Notebook 6.4.3 is running at:
+[I 21:02:01.060 NotebookApp] http://linux51:8886/?token=3c689e4963f159caa8ea13d867cea38c56a20c670ccbab45
+[I 21:02:01.060 NotebookApp]  or http://127.0.0.1:8886/?token=3c689e4963f159caa8ea13d867cea38c56a20c670ccbab45
+[I 21:02:01.060 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 21:02:01.073 NotebookApp] 
     
     To access the notebook, open this file in a browser:
-        file:///home/users/zg78/.local/share/jupyter/runtime/nbserver-7858-open.html
+        file:///home/users/zg78/.local/share/jupyter/runtime/nbserver-48388-open.html
     Or copy and paste one of these URLs:
-        http://linux51:8886/?token=ce6f817af93569e670e60d0c7ba701fb44f5531ddcbf2a25
-     or http://127.0.0.1:8886/?token=ce6f817af93569e670e60d0c7ba701fb44f5531ddcbf2a25
-[I 19:41:13.398 NotebookApp] 302 GET / (152.3.140.46) 0.940000ms
+        http://linux51:8886/?token=3c689e4963f159caa8ea13d867cea38c56a20c670ccbab45
+     or http://127.0.0.1:8886/?token=3c689e4963f159caa8ea13d867cea38c56a20c670ccbab45
+[I 21:07:27.952 NotebookApp] 302 GET / (152.3.140.46) 0.930000ms
 /home/users/zg78/_conda/envs/base_torch/lib/python3.6/json/encoder.py:257: UserWarning: date_default is deprecated since jupyter_client 7.0.0. Use jupyter_client.jsonutil.json_default.
   return _iterencode(o, 0)
-[W 19:41:30.566 NotebookApp] Notebook simclr/simclr_base.ipynb is not trusted
-/home/users/zg78/_conda/envs/base_torch/lib/python3.6/json/encoder.py:257: UserWarning: date_default is deprecated since jupyter_client 7.0.0. Use jupyter_client.jsonutil.json_default.
-  return _iterencode(o, 0)
-[I 19:41:31.022 NotebookApp] Kernel started: 28c7b224-0876-4fec-b856-e657f695b0aa, name: python3
-ERROR:asyncio:Exception in callback <TaskStepMethWrapper object at 0x7f8fd76349b0>()
-handle: <Handle <TaskStepMethWrapper object at 0x7f8fd76349b0>()>
+[W 21:07:32.664 NotebookApp] 400 GET /api/contents/simclr_res50/simclr_base.ipynb?type=notebook&_=1670378852070 (152.3.140.46): Unreadable Notebook: /home/users/zg78/ece661_final/simclr_res50/simclr_base.ipynb NotJSONError("Notebook does not appear to be JSON: ''...",)
+[W 21:07:32.665 NotebookApp] Unreadable Notebook: /home/users/zg78/ece661_final/simclr_res50/simclr_base.ipynb NotJSONError("Notebook does not appear to be JSON: ''...",)
+[W 21:07:32.665 NotebookApp] 400 GET /api/contents/simclr_res50/simclr_base.ipynb?type=notebook&_=1670378852070 (152.3.140.46) 2.740000ms referer=http://localhost:8886/notebooks/simclr_res50/simclr_base.ipynb
+[W 21:07:43.309 NotebookApp] delete /simclr_res50/simclr_base.ipynb
+[I 21:07:45.264 NotebookApp] Creating new notebook in /simclr_res50
+[I 21:07:46.636 NotebookApp] Kernel started: 24784e9e-3fec-4b5f-8141-8ceefdc3db10, name: python3
+ERROR:asyncio:Exception in callback <TaskStepMethWrapper object at 0x7ff813244f60>()
+handle: <Handle <TaskStepMethWrapper object at 0x7ff813244f60>()>
 Traceback (most recent call last):
   File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/asyncio/events.py", line 145, in _run
     self._callback(*self._args)
 KeyError: <_UnixSelectorEventLoop running=True closed=False debug=False>
-[I 19:43:30.989 NotebookApp] Saving file at /simclr/simclr_base.ipynb
-[I 19:45:30.989 NotebookApp] Saving file at /simclr/simclr_base.ipynb
-[I 19:51:31.019 NotebookApp] Saving file at /simclr/simclr_base.ipynb
-[I 19:53:30.953 NotebookApp] Saving file at /simclr/simclr_base.ipynb
-[I 19:53:53.254 NotebookApp] Saving file at /simclr/simclr_base.ipynb
-[I 19:55:30.980 NotebookApp] Saving file at /simclr/simclr_base.ipynb
-[I 19:57:30.982 NotebookApp] Saving file at /simclr/simclr_base.ipynb
-[I 19:58:35.817 NotebookApp] Kernel interrupted: 28c7b224-0876-4fec-b856-e657f695b0aa
-[I 19:58:35.956 NotebookApp] Kernel interrupted: 28c7b224-0876-4fec-b856-e657f695b0aa
-[I 19:59:31.221 NotebookApp] Saving file at /simclr/simclr_base.ipynb
-[I 20:01:30.973 NotebookApp] Saving file at /simclr/simclr_base.ipynb
-[I 20:03:30.965 NotebookApp] Saving file at /simclr/simclr_base.ipynb
-[I 20:05:31.210 NotebookApp] Saving file at /simclr/simclr_base.ipynb
+/home/users/zg78/_conda/envs/base_torch/lib/python3.6/json/encoder.py:257: UserWarning: date_default is deprecated since jupyter_client 7.0.0. Use jupyter_client.jsonutil.json_default.
+  return _iterencode(o, 0)
+[I 21:09:46.690 NotebookApp] Saving file at /simclr_res50/Untitled.ipynb
+[I 21:11:46.641 NotebookApp] Saving file at /simclr_res50/Untitled.ipynb
+[W 21:13:46.728 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865917 (152.3.140.46): No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:13:46.728 NotebookApp] No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:13:46.729 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865917 (152.3.140.46) 3.250000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[I 21:13:46.813 NotebookApp] Uploading file to /simclr_res50/Untitled.ipynb
+[E 21:13:46.987 NotebookApp] Error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+    Traceback (most recent call last):
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 477, in save
+        self._save_notebook(os_path, nb)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 290, in _save_notebook
+        with self.atomic_writing(os_path, encoding='utf-8') as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 210, in atomic_writing
+        with atomic_writing(os_path, *args, log=self.log, **kwargs) as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 105, in atomic_writing
+        fileobj = io.open(path, 'w', encoding=encoding, **kwargs)
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:13:47.033 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46): Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:13:47.033 NotebookApp] Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[E 21:13:47.034 NotebookApp] {
+      "Host": "localhost:8886",
+      "Connection": "keep-alive",
+      "Content-Length": "6140",
+      "Sec-Ch-Ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Origin": "http://localhost:8886",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,fr;q=0.6",
+      "Cookie": "_xsrf=2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312; username-localhost-8887=\"2|1:0|10:1668190893|23:username-localhost-8887|44:NjRjOTMyMzQ1NGUzNGVkNzlmMzJiNzY5OTUwMzgwOTM=|9be69a649eec40152e5319e914a474ead2822613054a8707bf41b44276263427\"; username-localhost-8877=\"2|1:0|10:1669244015|23:username-localhost-8877|44:MDYxZDVlM2NmMzBmNGQ0NTliMmE5NjRhZjZhZTA0Y2M=|abcd10b5d6067b79588c1681896214a66752c63a13f804f821ac8eeb5ad0ae9d\"; username-localhost-8886=\"2|1:0|10:1669662515|23:username-localhost-8886|44:ZGU0NGMzMzYzOTc2NGExYmEzZGRkN2ViMWUwZmVmZWM=|ea053e968db6935ac2bacb8635760c8c41aee69def941a3ece636be889483164\"; username-localhost-8889=\"2|1:0|10:1670101178|23:username-localhost-8889|44:YjM0ODlmZTU5ZGFkNGJlODlmNzc5ZTgwNGExOWZjZjg=|ce23c90908ad6047fa5d8cba6bd5c61f6e9a4e8778970fe78ca9e582fe9127e5\"; username-localhost-8888=\"2|1:0|10:1670365293|23:username-localhost-8888|44:OTg5ZWVjZWNjNDE3NDdjNDgzMWI2MTZjNTllZmM3N2E=|b8cff1a75af570f38778e018076190147577b492070db653b4c105d5a8f88d27\""
+    }
+[E 21:13:47.034 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46) 222.570000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[W 21:15:46.719 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865918 (152.3.140.46): No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:15:46.719 NotebookApp] No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:15:46.720 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865918 (152.3.140.46) 2.400000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[I 21:15:46.771 NotebookApp] Uploading file to /simclr_res50/Untitled.ipynb
+[E 21:15:46.947 NotebookApp] Error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+    Traceback (most recent call last):
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 477, in save
+        self._save_notebook(os_path, nb)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 290, in _save_notebook
+        with self.atomic_writing(os_path, encoding='utf-8') as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 210, in atomic_writing
+        with atomic_writing(os_path, *args, log=self.log, **kwargs) as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 105, in atomic_writing
+        fileobj = io.open(path, 'w', encoding=encoding, **kwargs)
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:15:46.948 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46): Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:15:46.948 NotebookApp] Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[E 21:15:46.949 NotebookApp] {
+      "Host": "localhost:8886",
+      "Connection": "keep-alive",
+      "Content-Length": "6140",
+      "Sec-Ch-Ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Origin": "http://localhost:8886",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,fr;q=0.6",
+      "Cookie": "_xsrf=2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312; username-localhost-8887=\"2|1:0|10:1668190893|23:username-localhost-8887|44:NjRjOTMyMzQ1NGUzNGVkNzlmMzJiNzY5OTUwMzgwOTM=|9be69a649eec40152e5319e914a474ead2822613054a8707bf41b44276263427\"; username-localhost-8877=\"2|1:0|10:1669244015|23:username-localhost-8877|44:MDYxZDVlM2NmMzBmNGQ0NTliMmE5NjRhZjZhZTA0Y2M=|abcd10b5d6067b79588c1681896214a66752c63a13f804f821ac8eeb5ad0ae9d\"; username-localhost-8886=\"2|1:0|10:1669662515|23:username-localhost-8886|44:ZGU0NGMzMzYzOTc2NGExYmEzZGRkN2ViMWUwZmVmZWM=|ea053e968db6935ac2bacb8635760c8c41aee69def941a3ece636be889483164\"; username-localhost-8889=\"2|1:0|10:1670101178|23:username-localhost-8889|44:YjM0ODlmZTU5ZGFkNGJlODlmNzc5ZTgwNGExOWZjZjg=|ce23c90908ad6047fa5d8cba6bd5c61f6e9a4e8778970fe78ca9e582fe9127e5\"; username-localhost-8888=\"2|1:0|10:1670365293|23:username-localhost-8888|44:OTg5ZWVjZWNjNDE3NDdjNDgzMWI2MTZjNTllZmM3N2E=|b8cff1a75af570f38778e018076190147577b492070db653b4c105d5a8f88d27\""
+    }
+[E 21:15:46.949 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46) 179.710000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[W 21:17:46.711 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865919 (152.3.140.46): No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:17:46.711 NotebookApp] No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:17:46.712 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865919 (152.3.140.46) 2.760000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[I 21:17:46.769 NotebookApp] Uploading file to /simclr_res50/Untitled.ipynb
+[E 21:17:46.948 NotebookApp] Error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+    Traceback (most recent call last):
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 477, in save
+        self._save_notebook(os_path, nb)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 290, in _save_notebook
+        with self.atomic_writing(os_path, encoding='utf-8') as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 210, in atomic_writing
+        with atomic_writing(os_path, *args, log=self.log, **kwargs) as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 105, in atomic_writing
+        fileobj = io.open(path, 'w', encoding=encoding, **kwargs)
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:17:46.950 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46): Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:17:46.951 NotebookApp] Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[E 21:17:46.951 NotebookApp] {
+      "Host": "localhost:8886",
+      "Connection": "keep-alive",
+      "Content-Length": "6140",
+      "Sec-Ch-Ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Origin": "http://localhost:8886",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,fr;q=0.6",
+      "Cookie": "_xsrf=2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312; username-localhost-8887=\"2|1:0|10:1668190893|23:username-localhost-8887|44:NjRjOTMyMzQ1NGUzNGVkNzlmMzJiNzY5OTUwMzgwOTM=|9be69a649eec40152e5319e914a474ead2822613054a8707bf41b44276263427\"; username-localhost-8877=\"2|1:0|10:1669244015|23:username-localhost-8877|44:MDYxZDVlM2NmMzBmNGQ0NTliMmE5NjRhZjZhZTA0Y2M=|abcd10b5d6067b79588c1681896214a66752c63a13f804f821ac8eeb5ad0ae9d\"; username-localhost-8886=\"2|1:0|10:1669662515|23:username-localhost-8886|44:ZGU0NGMzMzYzOTc2NGExYmEzZGRkN2ViMWUwZmVmZWM=|ea053e968db6935ac2bacb8635760c8c41aee69def941a3ece636be889483164\"; username-localhost-8889=\"2|1:0|10:1670101178|23:username-localhost-8889|44:YjM0ODlmZTU5ZGFkNGJlODlmNzc5ZTgwNGExOWZjZjg=|ce23c90908ad6047fa5d8cba6bd5c61f6e9a4e8778970fe78ca9e582fe9127e5\"; username-localhost-8888=\"2|1:0|10:1670365293|23:username-localhost-8888|44:OTg5ZWVjZWNjNDE3NDdjNDgzMWI2MTZjNTllZmM3N2E=|b8cff1a75af570f38778e018076190147577b492070db653b4c105d5a8f88d27\""
+    }
+[E 21:17:46.951 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46) 183.810000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[W 21:19:46.714 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865920 (152.3.140.46): No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:19:46.714 NotebookApp] No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:19:46.715 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865920 (152.3.140.46) 2.760000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[I 21:19:46.775 NotebookApp] Uploading file to /simclr_res50/Untitled.ipynb
+[E 21:19:46.951 NotebookApp] Error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+    Traceback (most recent call last):
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 477, in save
+        self._save_notebook(os_path, nb)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 290, in _save_notebook
+        with self.atomic_writing(os_path, encoding='utf-8') as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 210, in atomic_writing
+        with atomic_writing(os_path, *args, log=self.log, **kwargs) as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 105, in atomic_writing
+        fileobj = io.open(path, 'w', encoding=encoding, **kwargs)
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:19:46.953 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46): Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:19:46.954 NotebookApp] Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[E 21:19:46.954 NotebookApp] {
+      "Host": "localhost:8886",
+      "Connection": "keep-alive",
+      "Content-Length": "6140",
+      "Sec-Ch-Ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Origin": "http://localhost:8886",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,fr;q=0.6",
+      "Cookie": "_xsrf=2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312; username-localhost-8887=\"2|1:0|10:1668190893|23:username-localhost-8887|44:NjRjOTMyMzQ1NGUzNGVkNzlmMzJiNzY5OTUwMzgwOTM=|9be69a649eec40152e5319e914a474ead2822613054a8707bf41b44276263427\"; username-localhost-8877=\"2|1:0|10:1669244015|23:username-localhost-8877|44:MDYxZDVlM2NmMzBmNGQ0NTliMmE5NjRhZjZhZTA0Y2M=|abcd10b5d6067b79588c1681896214a66752c63a13f804f821ac8eeb5ad0ae9d\"; username-localhost-8886=\"2|1:0|10:1669662515|23:username-localhost-8886|44:ZGU0NGMzMzYzOTc2NGExYmEzZGRkN2ViMWUwZmVmZWM=|ea053e968db6935ac2bacb8635760c8c41aee69def941a3ece636be889483164\"; username-localhost-8889=\"2|1:0|10:1670101178|23:username-localhost-8889|44:YjM0ODlmZTU5ZGFkNGJlODlmNzc5ZTgwNGExOWZjZjg=|ce23c90908ad6047fa5d8cba6bd5c61f6e9a4e8778970fe78ca9e582fe9127e5\"; username-localhost-8888=\"2|1:0|10:1670365293|23:username-localhost-8888|44:OTg5ZWVjZWNjNDE3NDdjNDgzMWI2MTZjNTllZmM3N2E=|b8cff1a75af570f38778e018076190147577b492070db653b4c105d5a8f88d27\""
+    }
+[E 21:19:46.954 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46) 180.120000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[W 21:21:46.710 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865921 (152.3.140.46): No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:21:46.711 NotebookApp] No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:21:46.711 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865921 (152.3.140.46) 2.770000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[I 21:21:46.761 NotebookApp] Uploading file to /simclr_res50/Untitled.ipynb
+[E 21:21:46.940 NotebookApp] Error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+    Traceback (most recent call last):
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 477, in save
+        self._save_notebook(os_path, nb)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 290, in _save_notebook
+        with self.atomic_writing(os_path, encoding='utf-8') as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 210, in atomic_writing
+        with atomic_writing(os_path, *args, log=self.log, **kwargs) as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 105, in atomic_writing
+        fileobj = io.open(path, 'w', encoding=encoding, **kwargs)
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:21:46.942 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46): Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:21:46.943 NotebookApp] Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[E 21:21:46.943 NotebookApp] {
+      "Host": "localhost:8886",
+      "Connection": "keep-alive",
+      "Content-Length": "6140",
+      "Sec-Ch-Ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Origin": "http://localhost:8886",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,fr;q=0.6",
+      "Cookie": "_xsrf=2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312; username-localhost-8887=\"2|1:0|10:1668190893|23:username-localhost-8887|44:NjRjOTMyMzQ1NGUzNGVkNzlmMzJiNzY5OTUwMzgwOTM=|9be69a649eec40152e5319e914a474ead2822613054a8707bf41b44276263427\"; username-localhost-8877=\"2|1:0|10:1669244015|23:username-localhost-8877|44:MDYxZDVlM2NmMzBmNGQ0NTliMmE5NjRhZjZhZTA0Y2M=|abcd10b5d6067b79588c1681896214a66752c63a13f804f821ac8eeb5ad0ae9d\"; username-localhost-8886=\"2|1:0|10:1669662515|23:username-localhost-8886|44:ZGU0NGMzMzYzOTc2NGExYmEzZGRkN2ViMWUwZmVmZWM=|ea053e968db6935ac2bacb8635760c8c41aee69def941a3ece636be889483164\"; username-localhost-8889=\"2|1:0|10:1670101178|23:username-localhost-8889|44:YjM0ODlmZTU5ZGFkNGJlODlmNzc5ZTgwNGExOWZjZjg=|ce23c90908ad6047fa5d8cba6bd5c61f6e9a4e8778970fe78ca9e582fe9127e5\"; username-localhost-8888=\"2|1:0|10:1670365293|23:username-localhost-8888|44:OTg5ZWVjZWNjNDE3NDdjNDgzMWI2MTZjNTllZmM3N2E=|b8cff1a75af570f38778e018076190147577b492070db653b4c105d5a8f88d27\""
+    }
+[E 21:21:46.943 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46) 183.430000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[W 21:23:46.715 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865922 (152.3.140.46): No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:23:46.716 NotebookApp] No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:23:46.716 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865922 (152.3.140.46) 2.720000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[I 21:23:46.773 NotebookApp] Uploading file to /simclr_res50/Untitled.ipynb
+[E 21:23:46.952 NotebookApp] Error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+    Traceback (most recent call last):
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 477, in save
+        self._save_notebook(os_path, nb)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 290, in _save_notebook
+        with self.atomic_writing(os_path, encoding='utf-8') as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 210, in atomic_writing
+        with atomic_writing(os_path, *args, log=self.log, **kwargs) as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 105, in atomic_writing
+        fileobj = io.open(path, 'w', encoding=encoding, **kwargs)
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:23:46.954 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46): Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:23:46.954 NotebookApp] Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[E 21:23:46.955 NotebookApp] {
+      "Host": "localhost:8886",
+      "Connection": "keep-alive",
+      "Content-Length": "6140",
+      "Sec-Ch-Ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Origin": "http://localhost:8886",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,fr;q=0.6",
+      "Cookie": "_xsrf=2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312; username-localhost-8887=\"2|1:0|10:1668190893|23:username-localhost-8887|44:NjRjOTMyMzQ1NGUzNGVkNzlmMzJiNzY5OTUwMzgwOTM=|9be69a649eec40152e5319e914a474ead2822613054a8707bf41b44276263427\"; username-localhost-8877=\"2|1:0|10:1669244015|23:username-localhost-8877|44:MDYxZDVlM2NmMzBmNGQ0NTliMmE5NjRhZjZhZTA0Y2M=|abcd10b5d6067b79588c1681896214a66752c63a13f804f821ac8eeb5ad0ae9d\"; username-localhost-8886=\"2|1:0|10:1669662515|23:username-localhost-8886|44:ZGU0NGMzMzYzOTc2NGExYmEzZGRkN2ViMWUwZmVmZWM=|ea053e968db6935ac2bacb8635760c8c41aee69def941a3ece636be889483164\"; username-localhost-8889=\"2|1:0|10:1670101178|23:username-localhost-8889|44:YjM0ODlmZTU5ZGFkNGJlODlmNzc5ZTgwNGExOWZjZjg=|ce23c90908ad6047fa5d8cba6bd5c61f6e9a4e8778970fe78ca9e582fe9127e5\"; username-localhost-8888=\"2|1:0|10:1670365293|23:username-localhost-8888|44:OTg5ZWVjZWNjNDE3NDdjNDgzMWI2MTZjNTllZmM3N2E=|b8cff1a75af570f38778e018076190147577b492070db653b4c105d5a8f88d27\""
+    }
+[E 21:23:46.955 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46) 183.220000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[W 21:25:46.719 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865923 (152.3.140.46): No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:25:46.720 NotebookApp] No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:25:46.720 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865923 (152.3.140.46) 2.720000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[I 21:25:47.018 NotebookApp] Uploading file to /simclr_res50/Untitled.ipynb
+[E 21:25:47.204 NotebookApp] Error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+    Traceback (most recent call last):
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 477, in save
+        self._save_notebook(os_path, nb)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 290, in _save_notebook
+        with self.atomic_writing(os_path, encoding='utf-8') as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 210, in atomic_writing
+        with atomic_writing(os_path, *args, log=self.log, **kwargs) as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 105, in atomic_writing
+        fileobj = io.open(path, 'w', encoding=encoding, **kwargs)
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:25:47.207 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46): Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:25:47.207 NotebookApp] Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[E 21:25:47.207 NotebookApp] {
+      "Host": "localhost:8886",
+      "Connection": "keep-alive",
+      "Content-Length": "6140",
+      "Sec-Ch-Ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Origin": "http://localhost:8886",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,fr;q=0.6",
+      "Cookie": "_xsrf=2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312; username-localhost-8887=\"2|1:0|10:1668190893|23:username-localhost-8887|44:NjRjOTMyMzQ1NGUzNGVkNzlmMzJiNzY5OTUwMzgwOTM=|9be69a649eec40152e5319e914a474ead2822613054a8707bf41b44276263427\"; username-localhost-8877=\"2|1:0|10:1669244015|23:username-localhost-8877|44:MDYxZDVlM2NmMzBmNGQ0NTliMmE5NjRhZjZhZTA0Y2M=|abcd10b5d6067b79588c1681896214a66752c63a13f804f821ac8eeb5ad0ae9d\"; username-localhost-8886=\"2|1:0|10:1669662515|23:username-localhost-8886|44:ZGU0NGMzMzYzOTc2NGExYmEzZGRkN2ViMWUwZmVmZWM=|ea053e968db6935ac2bacb8635760c8c41aee69def941a3ece636be889483164\"; username-localhost-8889=\"2|1:0|10:1670101178|23:username-localhost-8889|44:YjM0ODlmZTU5ZGFkNGJlODlmNzc5ZTgwNGExOWZjZjg=|ce23c90908ad6047fa5d8cba6bd5c61f6e9a4e8778970fe78ca9e582fe9127e5\"; username-localhost-8888=\"2|1:0|10:1670365293|23:username-localhost-8888|44:OTg5ZWVjZWNjNDE3NDdjNDgzMWI2MTZjNTllZmM3N2E=|b8cff1a75af570f38778e018076190147577b492070db653b4c105d5a8f88d27\""
+    }
+[E 21:25:47.208 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46) 191.250000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[W 21:27:53.082 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865924 (152.3.140.46): No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:27:53.083 NotebookApp] No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:27:53.083 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865924 (152.3.140.46) 2.770000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[I 21:27:53.137 NotebookApp] Uploading file to /simclr_res50/Untitled.ipynb
+[E 21:27:53.318 NotebookApp] Error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+    Traceback (most recent call last):
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 477, in save
+        self._save_notebook(os_path, nb)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 290, in _save_notebook
+        with self.atomic_writing(os_path, encoding='utf-8') as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 210, in atomic_writing
+        with atomic_writing(os_path, *args, log=self.log, **kwargs) as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 105, in atomic_writing
+        fileobj = io.open(path, 'w', encoding=encoding, **kwargs)
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:27:53.320 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46): Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:27:53.320 NotebookApp] Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[E 21:27:53.320 NotebookApp] {
+      "Host": "localhost:8886",
+      "Connection": "keep-alive",
+      "Content-Length": "6140",
+      "Sec-Ch-Ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Origin": "http://localhost:8886",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,fr;q=0.6",
+      "Cookie": "_xsrf=2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312; username-localhost-8887=\"2|1:0|10:1668190893|23:username-localhost-8887|44:NjRjOTMyMzQ1NGUzNGVkNzlmMzJiNzY5OTUwMzgwOTM=|9be69a649eec40152e5319e914a474ead2822613054a8707bf41b44276263427\"; username-localhost-8877=\"2|1:0|10:1669244015|23:username-localhost-8877|44:MDYxZDVlM2NmMzBmNGQ0NTliMmE5NjRhZjZhZTA0Y2M=|abcd10b5d6067b79588c1681896214a66752c63a13f804f821ac8eeb5ad0ae9d\"; username-localhost-8886=\"2|1:0|10:1669662515|23:username-localhost-8886|44:ZGU0NGMzMzYzOTc2NGExYmEzZGRkN2ViMWUwZmVmZWM=|ea053e968db6935ac2bacb8635760c8c41aee69def941a3ece636be889483164\"; username-localhost-8889=\"2|1:0|10:1670101178|23:username-localhost-8889|44:YjM0ODlmZTU5ZGFkNGJlODlmNzc5ZTgwNGExOWZjZjg=|ce23c90908ad6047fa5d8cba6bd5c61f6e9a4e8778970fe78ca9e582fe9127e5\"; username-localhost-8888=\"2|1:0|10:1670365293|23:username-localhost-8888|44:OTg5ZWVjZWNjNDE3NDdjNDgzMWI2MTZjNTllZmM3N2E=|b8cff1a75af570f38778e018076190147577b492070db653b4c105d5a8f88d27\""
+    }
+[E 21:27:53.321 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46) 185.090000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[W 21:29:46.695 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865925 (152.3.140.46): No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:29:46.696 NotebookApp] No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:29:46.696 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865925 (152.3.140.46) 2.860000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[I 21:29:46.763 NotebookApp] Uploading file to /simclr_res50/Untitled.ipynb
+[E 21:29:46.942 NotebookApp] Error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+    Traceback (most recent call last):
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 477, in save
+        self._save_notebook(os_path, nb)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 290, in _save_notebook
+        with self.atomic_writing(os_path, encoding='utf-8') as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 210, in atomic_writing
+        with atomic_writing(os_path, *args, log=self.log, **kwargs) as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 105, in atomic_writing
+        fileobj = io.open(path, 'w', encoding=encoding, **kwargs)
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:29:46.945 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46): Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:29:46.945 NotebookApp] Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[E 21:29:46.946 NotebookApp] {
+      "Host": "localhost:8886",
+      "Connection": "keep-alive",
+      "Content-Length": "6140",
+      "Sec-Ch-Ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Origin": "http://localhost:8886",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,fr;q=0.6",
+      "Cookie": "_xsrf=2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312; username-localhost-8887=\"2|1:0|10:1668190893|23:username-localhost-8887|44:NjRjOTMyMzQ1NGUzNGVkNzlmMzJiNzY5OTUwMzgwOTM=|9be69a649eec40152e5319e914a474ead2822613054a8707bf41b44276263427\"; username-localhost-8877=\"2|1:0|10:1669244015|23:username-localhost-8877|44:MDYxZDVlM2NmMzBmNGQ0NTliMmE5NjRhZjZhZTA0Y2M=|abcd10b5d6067b79588c1681896214a66752c63a13f804f821ac8eeb5ad0ae9d\"; username-localhost-8886=\"2|1:0|10:1669662515|23:username-localhost-8886|44:ZGU0NGMzMzYzOTc2NGExYmEzZGRkN2ViMWUwZmVmZWM=|ea053e968db6935ac2bacb8635760c8c41aee69def941a3ece636be889483164\"; username-localhost-8889=\"2|1:0|10:1670101178|23:username-localhost-8889|44:YjM0ODlmZTU5ZGFkNGJlODlmNzc5ZTgwNGExOWZjZjg=|ce23c90908ad6047fa5d8cba6bd5c61f6e9a4e8778970fe78ca9e582fe9127e5\"; username-localhost-8888=\"2|1:0|10:1670365293|23:username-localhost-8888|44:OTg5ZWVjZWNjNDE3NDdjNDgzMWI2MTZjNTllZmM3N2E=|b8cff1a75af570f38778e018076190147577b492070db653b4c105d5a8f88d27\""
+    }
+[E 21:29:46.946 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46) 191.840000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[W 21:31:46.712 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865926 (152.3.140.46): No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:31:46.712 NotebookApp] No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:31:46.713 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865926 (152.3.140.46) 3.010000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[I 21:31:46.763 NotebookApp] Uploading file to /simclr_res50/Untitled.ipynb
+[E 21:31:46.953 NotebookApp] Error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+    Traceback (most recent call last):
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 477, in save
+        self._save_notebook(os_path, nb)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 290, in _save_notebook
+        with self.atomic_writing(os_path, encoding='utf-8') as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 210, in atomic_writing
+        with atomic_writing(os_path, *args, log=self.log, **kwargs) as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 105, in atomic_writing
+        fileobj = io.open(path, 'w', encoding=encoding, **kwargs)
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:31:46.955 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46): Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:31:46.955 NotebookApp] Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[E 21:31:46.956 NotebookApp] {
+      "Host": "localhost:8886",
+      "Connection": "keep-alive",
+      "Content-Length": "6140",
+      "Sec-Ch-Ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Origin": "http://localhost:8886",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,fr;q=0.6",
+      "Cookie": "_xsrf=2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312; username-localhost-8887=\"2|1:0|10:1668190893|23:username-localhost-8887|44:NjRjOTMyMzQ1NGUzNGVkNzlmMzJiNzY5OTUwMzgwOTM=|9be69a649eec40152e5319e914a474ead2822613054a8707bf41b44276263427\"; username-localhost-8877=\"2|1:0|10:1669244015|23:username-localhost-8877|44:MDYxZDVlM2NmMzBmNGQ0NTliMmE5NjRhZjZhZTA0Y2M=|abcd10b5d6067b79588c1681896214a66752c63a13f804f821ac8eeb5ad0ae9d\"; username-localhost-8886=\"2|1:0|10:1669662515|23:username-localhost-8886|44:ZGU0NGMzMzYzOTc2NGExYmEzZGRkN2ViMWUwZmVmZWM=|ea053e968db6935ac2bacb8635760c8c41aee69def941a3ece636be889483164\"; username-localhost-8889=\"2|1:0|10:1670101178|23:username-localhost-8889|44:YjM0ODlmZTU5ZGFkNGJlODlmNzc5ZTgwNGExOWZjZjg=|ce23c90908ad6047fa5d8cba6bd5c61f6e9a4e8778970fe78ca9e582fe9127e5\"; username-localhost-8888=\"2|1:0|10:1670365293|23:username-localhost-8888|44:OTg5ZWVjZWNjNDE3NDdjNDgzMWI2MTZjNTllZmM3N2E=|b8cff1a75af570f38778e018076190147577b492070db653b4c105d5a8f88d27\""
+    }
+[E 21:31:46.956 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46) 194.430000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[W 21:34:29.711 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865927 (152.3.140.46): No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:34:29.712 NotebookApp] No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:34:29.712 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865927 (152.3.140.46) 2.820000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[I 21:34:29.758 NotebookApp] Uploading file to /simclr_res50/Untitled.ipynb
+[E 21:34:29.945 NotebookApp] Error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+    Traceback (most recent call last):
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 477, in save
+        self._save_notebook(os_path, nb)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 290, in _save_notebook
+        with self.atomic_writing(os_path, encoding='utf-8') as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 210, in atomic_writing
+        with atomic_writing(os_path, *args, log=self.log, **kwargs) as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 105, in atomic_writing
+        fileobj = io.open(path, 'w', encoding=encoding, **kwargs)
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:34:29.947 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46): Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:34:29.948 NotebookApp] Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[E 21:34:29.948 NotebookApp] {
+      "Host": "localhost:8886",
+      "Connection": "keep-alive",
+      "Content-Length": "6140",
+      "Sec-Ch-Ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Origin": "http://localhost:8886",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,fr;q=0.6",
+      "Cookie": "_xsrf=2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312; username-localhost-8887=\"2|1:0|10:1668190893|23:username-localhost-8887|44:NjRjOTMyMzQ1NGUzNGVkNzlmMzJiNzY5OTUwMzgwOTM=|9be69a649eec40152e5319e914a474ead2822613054a8707bf41b44276263427\"; username-localhost-8877=\"2|1:0|10:1669244015|23:username-localhost-8877|44:MDYxZDVlM2NmMzBmNGQ0NTliMmE5NjRhZjZhZTA0Y2M=|abcd10b5d6067b79588c1681896214a66752c63a13f804f821ac8eeb5ad0ae9d\"; username-localhost-8886=\"2|1:0|10:1669662515|23:username-localhost-8886|44:ZGU0NGMzMzYzOTc2NGExYmEzZGRkN2ViMWUwZmVmZWM=|ea053e968db6935ac2bacb8635760c8c41aee69def941a3ece636be889483164\"; username-localhost-8889=\"2|1:0|10:1670101178|23:username-localhost-8889|44:YjM0ODlmZTU5ZGFkNGJlODlmNzc5ZTgwNGExOWZjZjg=|ce23c90908ad6047fa5d8cba6bd5c61f6e9a4e8778970fe78ca9e582fe9127e5\"; username-localhost-8888=\"2|1:0|10:1670365293|23:username-localhost-8888|44:OTg5ZWVjZWNjNDE3NDdjNDgzMWI2MTZjNTllZmM3N2E=|b8cff1a75af570f38778e018076190147577b492070db653b4c105d5a8f88d27\""
+    }
+[E 21:34:29.948 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46) 191.280000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[W 21:35:38.209 NotebookApp] 404 GET /api/contents/simclr_res50?type=directory&_=1670378847888 (152.3.140.46): No such file or directory: simclr_res50
+[W 21:35:38.209 NotebookApp] No such file or directory: simclr_res50
+[W 21:35:38.210 NotebookApp] 404 GET /api/contents/simclr_res50?type=directory&_=1670378847888 (152.3.140.46) 2.780000ms referer=http://localhost:8886/tree/simclr_res50
+[W 21:35:44.653 NotebookApp] Notebook simclr_res18/Untitled.ipynb is not trusted
+[I 21:35:44.870 NotebookApp] Kernel started: f23ecbdb-3a11-4d3a-a18f-af6616b8816a, name: python3
+[W 21:36:08.106 NotebookApp] Notebook simclr/simclr_base.ipynb is not trusted
+[I 21:36:08.596 NotebookApp] Kernel started: d30e2705-2231-42c2-bed2-ad60c609e3b8, name: python3
+[W 21:36:29.703 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865928 (152.3.140.46): No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:36:29.704 NotebookApp] No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:36:29.704 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865928 (152.3.140.46) 2.370000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[I 21:36:29.754 NotebookApp] Uploading file to /simclr_res50/Untitled.ipynb
+[E 21:36:29.765 NotebookApp] Error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+    Traceback (most recent call last):
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 477, in save
+        self._save_notebook(os_path, nb)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 290, in _save_notebook
+        with self.atomic_writing(os_path, encoding='utf-8') as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 210, in atomic_writing
+        with atomic_writing(os_path, *args, log=self.log, **kwargs) as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 105, in atomic_writing
+        fileobj = io.open(path, 'w', encoding=encoding, **kwargs)
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:36:29.766 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46): Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:36:29.766 NotebookApp] Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[E 21:36:29.767 NotebookApp] {
+      "Host": "localhost:8886",
+      "Connection": "keep-alive",
+      "Content-Length": "6140",
+      "Sec-Ch-Ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Origin": "http://localhost:8886",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,fr;q=0.6",
+      "Cookie": "_xsrf=2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312; username-localhost-8887=\"2|1:0|10:1668190893|23:username-localhost-8887|44:NjRjOTMyMzQ1NGUzNGVkNzlmMzJiNzY5OTUwMzgwOTM=|9be69a649eec40152e5319e914a474ead2822613054a8707bf41b44276263427\"; username-localhost-8877=\"2|1:0|10:1669244015|23:username-localhost-8877|44:MDYxZDVlM2NmMzBmNGQ0NTliMmE5NjRhZjZhZTA0Y2M=|abcd10b5d6067b79588c1681896214a66752c63a13f804f821ac8eeb5ad0ae9d\"; username-localhost-8886=\"2|1:0|10:1669662515|23:username-localhost-8886|44:ZGU0NGMzMzYzOTc2NGExYmEzZGRkN2ViMWUwZmVmZWM=|ea053e968db6935ac2bacb8635760c8c41aee69def941a3ece636be889483164\"; username-localhost-8889=\"2|1:0|10:1670101178|23:username-localhost-8889|44:YjM0ODlmZTU5ZGFkNGJlODlmNzc5ZTgwNGExOWZjZjg=|ce23c90908ad6047fa5d8cba6bd5c61f6e9a4e8778970fe78ca9e582fe9127e5\"; username-localhost-8888=\"2|1:0|10:1670365293|23:username-localhost-8888|44:OTg5ZWVjZWNjNDE3NDdjNDgzMWI2MTZjNTllZmM3N2E=|b8cff1a75af570f38778e018076190147577b492070db653b4c105d5a8f88d27\""
+    }
+[E 21:36:29.767 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46) 14.350000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[I 21:38:08.666 NotebookApp] Saving file at /simclr/simclr_base.ipynb
+[W 21:38:08.666 NotebookApp] Notebook simclr/simclr_base.ipynb is not trusted
+[W 21:38:29.719 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865929 (152.3.140.46): No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:38:29.719 NotebookApp] No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:38:29.720 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865929 (152.3.140.46) 2.270000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[I 21:38:29.770 NotebookApp] Uploading file to /simclr_res50/Untitled.ipynb
+[E 21:38:29.782 NotebookApp] Error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+    Traceback (most recent call last):
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 477, in save
+        self._save_notebook(os_path, nb)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 290, in _save_notebook
+        with self.atomic_writing(os_path, encoding='utf-8') as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 210, in atomic_writing
+        with atomic_writing(os_path, *args, log=self.log, **kwargs) as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 105, in atomic_writing
+        fileobj = io.open(path, 'w', encoding=encoding, **kwargs)
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:38:29.783 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46): Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:38:29.784 NotebookApp] Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[E 21:38:29.784 NotebookApp] {
+      "Host": "localhost:8886",
+      "Connection": "keep-alive",
+      "Content-Length": "6140",
+      "Sec-Ch-Ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Origin": "http://localhost:8886",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,fr;q=0.6",
+      "Cookie": "_xsrf=2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312; username-localhost-8887=\"2|1:0|10:1668190893|23:username-localhost-8887|44:NjRjOTMyMzQ1NGUzNGVkNzlmMzJiNzY5OTUwMzgwOTM=|9be69a649eec40152e5319e914a474ead2822613054a8707bf41b44276263427\"; username-localhost-8877=\"2|1:0|10:1669244015|23:username-localhost-8877|44:MDYxZDVlM2NmMzBmNGQ0NTliMmE5NjRhZjZhZTA0Y2M=|abcd10b5d6067b79588c1681896214a66752c63a13f804f821ac8eeb5ad0ae9d\"; username-localhost-8886=\"2|1:0|10:1669662515|23:username-localhost-8886|44:ZGU0NGMzMzYzOTc2NGExYmEzZGRkN2ViMWUwZmVmZWM=|ea053e968db6935ac2bacb8635760c8c41aee69def941a3ece636be889483164\"; username-localhost-8889=\"2|1:0|10:1670101178|23:username-localhost-8889|44:YjM0ODlmZTU5ZGFkNGJlODlmNzc5ZTgwNGExOWZjZjg=|ce23c90908ad6047fa5d8cba6bd5c61f6e9a4e8778970fe78ca9e582fe9127e5\"; username-localhost-8888=\"2|1:0|10:1670365293|23:username-localhost-8888|44:OTg5ZWVjZWNjNDE3NDdjNDgzMWI2MTZjNTllZmM3N2E=|b8cff1a75af570f38778e018076190147577b492070db653b4c105d5a8f88d27\""
+    }
+[E 21:38:29.784 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46) 15.100000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[I 21:39:44.896 NotebookApp] Saving file at /simclr_res18/Untitled.ipynb
+[W 21:40:29.704 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865930 (152.3.140.46): No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:40:29.704 NotebookApp] No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:40:29.705 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865930 (152.3.140.46) 2.220000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[I 21:40:29.750 NotebookApp] Uploading file to /simclr_res50/Untitled.ipynb
+[E 21:40:29.932 NotebookApp] Error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+    Traceback (most recent call last):
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 477, in save
+        self._save_notebook(os_path, nb)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 290, in _save_notebook
+        with self.atomic_writing(os_path, encoding='utf-8') as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 210, in atomic_writing
+        with atomic_writing(os_path, *args, log=self.log, **kwargs) as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 105, in atomic_writing
+        fileobj = io.open(path, 'w', encoding=encoding, **kwargs)
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:40:29.934 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46): Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:40:29.934 NotebookApp] Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[E 21:40:29.935 NotebookApp] {
+      "Host": "localhost:8886",
+      "Connection": "keep-alive",
+      "Content-Length": "6140",
+      "Sec-Ch-Ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Origin": "http://localhost:8886",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,fr;q=0.6",
+      "Cookie": "_xsrf=2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312; username-localhost-8887=\"2|1:0|10:1668190893|23:username-localhost-8887|44:NjRjOTMyMzQ1NGUzNGVkNzlmMzJiNzY5OTUwMzgwOTM=|9be69a649eec40152e5319e914a474ead2822613054a8707bf41b44276263427\"; username-localhost-8877=\"2|1:0|10:1669244015|23:username-localhost-8877|44:MDYxZDVlM2NmMzBmNGQ0NTliMmE5NjRhZjZhZTA0Y2M=|abcd10b5d6067b79588c1681896214a66752c63a13f804f821ac8eeb5ad0ae9d\"; username-localhost-8886=\"2|1:0|10:1669662515|23:username-localhost-8886|44:ZGU0NGMzMzYzOTc2NGExYmEzZGRkN2ViMWUwZmVmZWM=|ea053e968db6935ac2bacb8635760c8c41aee69def941a3ece636be889483164\"; username-localhost-8889=\"2|1:0|10:1670101178|23:username-localhost-8889|44:YjM0ODlmZTU5ZGFkNGJlODlmNzc5ZTgwNGExOWZjZjg=|ce23c90908ad6047fa5d8cba6bd5c61f6e9a4e8778970fe78ca9e582fe9127e5\"; username-localhost-8888=\"2|1:0|10:1670365293|23:username-localhost-8888|44:OTg5ZWVjZWNjNDE3NDdjNDgzMWI2MTZjNTllZmM3N2E=|b8cff1a75af570f38778e018076190147577b492070db653b4c105d5a8f88d27\""
+    }
+[E 21:40:29.935 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46) 186.190000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[W 21:42:29.708 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865931 (152.3.140.46): No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:42:29.708 NotebookApp] No such file or directory: simclr_res50/Untitled.ipynb
+[W 21:42:29.709 NotebookApp] 404 GET /api/contents/simclr_res50/Untitled.ipynb?content=0&_=1670378865931 (152.3.140.46) 2.810000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3
+[I 21:42:29.996 NotebookApp] Uploading file to /simclr_res50/Untitled.ipynb
+[E 21:42:30.179 NotebookApp] Error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+    Traceback (most recent call last):
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 477, in save
+        self._save_notebook(os_path, nb)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 290, in _save_notebook
+        with self.atomic_writing(os_path, encoding='utf-8') as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 210, in atomic_writing
+        with atomic_writing(os_path, *args, log=self.log, **kwargs) as f:
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/users/zg78/_conda/envs/base_torch/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 105, in atomic_writing
+        fileobj = io.open(path, 'w', encoding=encoding, **kwargs)
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:42:30.181 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46): Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[W 21:42:30.181 NotebookApp] Unexpected error while saving file: simclr_res50/Untitled.ipynb [Errno 2] No such file or directory: '/home/users/zg78/ece661_final/simclr_res50/Untitled.ipynb'
+[E 21:42:30.182 NotebookApp] {
+      "Host": "localhost:8886",
+      "Connection": "keep-alive",
+      "Content-Length": "6140",
+      "Sec-Ch-Ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Origin": "http://localhost:8886",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,fr;q=0.6",
+      "Cookie": "_xsrf=2|f11052c8|4b8d0895253a8d7267a00b7177364d1e|1667875312; username-localhost-8887=\"2|1:0|10:1668190893|23:username-localhost-8887|44:NjRjOTMyMzQ1NGUzNGVkNzlmMzJiNzY5OTUwMzgwOTM=|9be69a649eec40152e5319e914a474ead2822613054a8707bf41b44276263427\"; username-localhost-8877=\"2|1:0|10:1669244015|23:username-localhost-8877|44:MDYxZDVlM2NmMzBmNGQ0NTliMmE5NjRhZjZhZTA0Y2M=|abcd10b5d6067b79588c1681896214a66752c63a13f804f821ac8eeb5ad0ae9d\"; username-localhost-8886=\"2|1:0|10:1669662515|23:username-localhost-8886|44:ZGU0NGMzMzYzOTc2NGExYmEzZGRkN2ViMWUwZmVmZWM=|ea053e968db6935ac2bacb8635760c8c41aee69def941a3ece636be889483164\"; username-localhost-8889=\"2|1:0|10:1670101178|23:username-localhost-8889|44:YjM0ODlmZTU5ZGFkNGJlODlmNzc5ZTgwNGExOWZjZjg=|ce23c90908ad6047fa5d8cba6bd5c61f6e9a4e8778970fe78ca9e582fe9127e5\"; username-localhost-8888=\"2|1:0|10:1670365293|23:username-localhost-8888|44:OTg5ZWVjZWNjNDE3NDdjNDgzMWI2MTZjNTllZmM3N2E=|b8cff1a75af570f38778e018076190147577b492070db653b4c105d5a8f88d27\""
+    }
+[E 21:42:30.182 NotebookApp] 500 PUT /api/contents/simclr_res50/Untitled.ipynb (152.3.140.46) 187.050000ms referer=http://localhost:8886/notebooks/simclr_res50/Untitled.ipynb?kernel_name=python3

@@ -6,7 +6,7 @@ import subprocess
 
 
 pretrained_model_folder = '/home/users/zg78/ece661_final/simclr/models/simclr_pretrained/'
-pretrained_model_paths = [pretrained_model_folder+p for p in os.listdir(pretrained_model_folder) if ('valwtest_5' in p or 'valwtest_4' in p)]
+pretrained_model_paths = [pretrained_model_folder+p for p in os.listdir(pretrained_model_folder) if not ('valwtest_3' in p or 'valwtest_4' in p)]
 print('Running', pretrained_model_paths, len(pretrained_model_paths))
 
 
